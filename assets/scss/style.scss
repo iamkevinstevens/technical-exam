@@ -1,0 +1,219 @@
+
+/** Main style scss file **/
+
+// vars
+$rob: 'Roboto', 'sans-serif';
+
+// body
+body {
+    margin: 75px 0 0 0;
+    h1,h2,h3,span,p,div,li,a {
+        font-family: $rob;
+        margin: 0 0 10px 0;
+    }
+    %flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    %button-default {
+        font: 300 16px/100% $rob;
+        cursor: pointer;
+        color: #fff;
+        background: #25406e; 
+        padding: 12px 15px;
+        margin: 0 15px 0 0;
+        width: 120px;
+    }
+    .main-container {
+        width: 100%;
+        max-width: 1199px;
+        margin: 0 auto;
+        padding: 0 15px;
+        position: relative;
+        z-index: 1;
+        .reg-heading {
+            margin: 0 0 35px 0;
+        }
+        .reg-form-wrap {
+            .form-wrap {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                .form-entries {
+                    width: 70%;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    .input-wrap {
+                        width: 50%;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        &#passport-wrap, &#address-wrap {
+                            width: 100%;
+                        }
+                    }
+                }
+                .form-photo {
+                    width: 30%;
+                }
+            }
+            .input-wrap {
+                box-sizing: border-box;
+                font: 400 16px/100% $rob;
+                margin: 0 0 20px 0;
+                padding: 0 20px 0 0;
+                label,input,select {
+                    margin: 0 0 7px 0;
+                }
+                input[type='text'], select{
+                    font: 400 16px/100% $rob;
+                    width: 100%;
+                    padding: 5px;
+                    box-sizing: inherit;
+                }
+                &.fail {
+                    input,select {
+                        border: 1px solid red;
+                    }
+                    .msg {
+                        font: 400 16px/18px $rob;
+                        color: red;
+                        margin: 0;
+                    }
+                }
+                &#photoup-wrap {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: flex-start;
+                    align-items: center;;
+                    .image-wrap {
+                        @extend %flex-center;
+                        height: 300px;
+                        width: 300px;
+                        background: #fff;
+                        border-radius: 25px;
+                        border: 1px solid #b7b7b7;
+                    }
+                    img {
+                        height: auto;
+                        width: auto;
+                        max-width: 250px;
+                        max-height: 250px;
+                    }
+                }
+            }
+            button[type="submit"] {
+                @extend %button-default;
+            }
+        }
+    }
+    #lightbox {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.75);
+        margin: 0;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        .lb-content {
+            width: 100%;
+            max-width: 1400px;
+            padding: 25px;
+            border-radius: 10px;
+            background: #fff;
+            .lb-confirm {
+                display: none;
+                height: 100%;
+                max-width: 1100px;
+                margin: 35px auto 0 auto;
+                .lb-confirm-wrap {
+                    .lb-header {
+                        margin: 0 0 35px 0;
+                    }
+                    .lb-body {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        .lb-entries {
+                            width: 60%;
+                            .lb-entry {
+                                word-break: break-all;
+                                margin: 0 0 22px 0;
+                                p {
+                                    margin: 0 0 5px 0;
+                                }
+                                .label{
+                                    font: 700 20px/120% $rob;
+                                    margin: 0 0 5px 0;
+                                }
+                                .value {
+                                    font: 400 16px/120% $rob;
+                                }
+                            }
+                        }
+                        .lb-img {
+                            width: 40%;
+                            img {
+                                height: auto;
+                                width: auto;
+                                max-height: 300px;
+                                max-width: 300px;
+                                margin: 0 0 25px 0;
+                            }
+                        }
+                    }
+                    .lb-footer{
+                        .confirm-box {
+                            margin: 0 0 30px 0;
+                            input {
+                                transform: scale(2);
+                            }
+                            label {
+                                margin: 0 0 0 25px;
+                            }
+                        }
+                        .back,
+                        .submit {
+                            @extend %button-default;
+                            &.disabled {
+                                background: #717171 !important; 
+                            }
+                        }
+                    }
+                }
+            }
+            .lb-complete {
+                display: none;
+                .lb-complete-wrap {
+                    @extend %flex-center;
+                    img {
+                        height: 150px;
+                        width: 150px;
+                    }
+                    .msg-wrap {
+                        margin: 0 0 0 15px;
+                        h2 {
+                            font: 500 25px/100% $rob;
+                        }
+                        p {
+                            font: 500 15px/100% $rob;
+                        }
+                    }
+                }
+            }
+        }
+        &.show {
+            display: flex;
+        }
+    }
+} 

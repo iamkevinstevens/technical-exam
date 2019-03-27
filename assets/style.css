@@ -1,0 +1,198 @@
+/** Main style scss file **/
+body {
+  margin: 75px 0 0 0;
+}
+body h1, body h2, body h3, body span, body p, body div, body li, body a {
+  font-family: "Roboto", "sans-serif";
+  margin: 0 0 10px 0;
+}
+body #lightbox .lb-content .lb-complete .lb-complete-wrap, body .main-container .reg-form-wrap .input-wrap#photoup-wrap .image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-footer .back,
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-footer .submit, body .main-container .reg-form-wrap button[type=submit] {
+  font: 300 16px/100% "Roboto", "sans-serif";
+  cursor: pointer;
+  color: #fff;
+  background: #25406e;
+  padding: 12px 15px;
+  margin: 0 15px 0 0;
+  width: 120px;
+}
+body .main-container {
+  width: 100%;
+  max-width: 1199px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+body .main-container .reg-heading {
+  margin: 0 0 35px 0;
+}
+body .main-container .reg-form-wrap .form-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+body .main-container .reg-form-wrap .form-wrap .form-entries {
+  width: 70%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body .main-container .reg-form-wrap .form-wrap .form-entries .input-wrap {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body .main-container .reg-form-wrap .form-wrap .form-entries .input-wrap#passport-wrap, body .main-container .reg-form-wrap .form-wrap .form-entries .input-wrap#address-wrap {
+  width: 100%;
+}
+body .main-container .reg-form-wrap .form-wrap .form-photo {
+  width: 30%;
+}
+body .main-container .reg-form-wrap .input-wrap {
+  box-sizing: border-box;
+  font: 400 16px/100% "Roboto", "sans-serif";
+  margin: 0 0 20px 0;
+  padding: 0 20px 0 0;
+}
+body .main-container .reg-form-wrap .input-wrap label, body .main-container .reg-form-wrap .input-wrap input, body .main-container .reg-form-wrap .input-wrap select {
+  margin: 0 0 7px 0;
+}
+body .main-container .reg-form-wrap .input-wrap input[type=text], body .main-container .reg-form-wrap .input-wrap select {
+  font: 400 16px/100% "Roboto", "sans-serif";
+  width: 100%;
+  padding: 5px;
+  box-sizing: inherit;
+}
+body .main-container .reg-form-wrap .input-wrap.fail input, body .main-container .reg-form-wrap .input-wrap.fail select {
+  border: 1px solid red;
+}
+body .main-container .reg-form-wrap .input-wrap.fail .msg {
+  font: 400 16px/18px "Roboto", "sans-serif";
+  color: red;
+  margin: 0;
+}
+body .main-container .reg-form-wrap .input-wrap#photoup-wrap {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+body .main-container .reg-form-wrap .input-wrap#photoup-wrap .image-wrap {
+  height: 300px;
+  width: 300px;
+  background: #fff;
+  border-radius: 25px;
+  border: 1px solid #b7b7b7;
+}
+body .main-container .reg-form-wrap .input-wrap#photoup-wrap img {
+  height: auto;
+  width: auto;
+  max-width: 250px;
+  max-height: 250px;
+}
+body #lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  margin: 0;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+}
+body #lightbox .lb-content {
+  width: 100%;
+  max-width: 1400px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #fff;
+}
+body #lightbox .lb-content .lb-confirm {
+  display: none;
+  height: 100%;
+  max-width: 1100px;
+  margin: 35px auto 0 auto;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-header {
+  margin: 0 0 35px 0;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-body .lb-entries {
+  width: 60%;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-body .lb-entries .lb-entry {
+  word-break: break-all;
+  margin: 0 0 22px 0;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-body .lb-entries .lb-entry p {
+  margin: 0 0 5px 0;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-body .lb-entries .lb-entry .label {
+  font: 700 20px/120% "Roboto", "sans-serif";
+  margin: 0 0 5px 0;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-body .lb-entries .lb-entry .value {
+  font: 400 16px/120% "Roboto", "sans-serif";
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-body .lb-img {
+  width: 40%;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-body .lb-img img {
+  height: auto;
+  width: auto;
+  max-height: 300px;
+  max-width: 300px;
+  margin: 0 0 25px 0;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-footer .confirm-box {
+  margin: 0 0 30px 0;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-footer .confirm-box input {
+  transform: scale(2);
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-footer .confirm-box label {
+  margin: 0 0 0 25px;
+}
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-footer .back.disabled,
+body #lightbox .lb-content .lb-confirm .lb-confirm-wrap .lb-footer .submit.disabled {
+  background: #717171 !important;
+}
+body #lightbox .lb-content .lb-complete {
+  display: none;
+}
+body #lightbox .lb-content .lb-complete .lb-complete-wrap img {
+  height: 150px;
+  width: 150px;
+}
+body #lightbox .lb-content .lb-complete .lb-complete-wrap .msg-wrap {
+  margin: 0 0 0 15px;
+}
+body #lightbox .lb-content .lb-complete .lb-complete-wrap .msg-wrap h2 {
+  font: 500 25px/100% "Roboto", "sans-serif";
+}
+body #lightbox .lb-content .lb-complete .lb-complete-wrap .msg-wrap p {
+  font: 500 15px/100% "Roboto", "sans-serif";
+}
+body #lightbox.show {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
